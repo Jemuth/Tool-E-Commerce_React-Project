@@ -1,6 +1,7 @@
 {
   "name": "toolcommerce",
   "private": true,
+  "homepage": "https://jemuth.github.io/PrimeraEntregaReact/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
