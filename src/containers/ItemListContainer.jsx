@@ -94,7 +94,6 @@ const ItemListContainer = ({greeting}) => {
         <section>
             <p>{greeting}</p>
         </section>
-        <ItemCount initial={3} stock={5} onAdd={onAdd}/>
         <ItemList data={data} />
         </>
     );
