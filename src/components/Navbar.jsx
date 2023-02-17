@@ -9,11 +9,10 @@ const Navbar = () => {
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item"><a href="#">Eléctricas</a></li>
                     <li className="list-group-item"><a href="#">Manuales</a></li>
-                    <li className="list-group-item"><a href="#">Equipo de seguridad</a></li>
-                    <li className="list-group-item"><a href="#">Contenedores</a></li>
+                    <li className="list-group-item"><a href="#">Equipo de protección personal</a></li>
+                    <li className="list-group-item"><a href="#"><CartWidget/></a></li>
                 </ul>
             </div>
-            <CartWidget/>
         </nav>
     );
 }
