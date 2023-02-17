@@ -1,6 +1,7 @@
 import './App.css'
 
-import Cart from './components/Cart'
+import Cart from './components/Cart';
+import Welcome from './components/Welcome';
 import Navbar from './components/Navbar';
 import ItemListContainer from './containers/ItemListContainer';
 import ItemDetailContainer from './containers/ItemDetailContainer';
@@ -14,9 +15,9 @@ function App() {
   <BrowserRouter>
   <Navbar/>
   <Routes>
-    <Route path='/' element={<ItemListContainer />} />
+    <Route path='/' element={<Welcome />} />
     <Route path='/catalogo' element={<ItemListContainer />} />
-    <Route path='/categorias' element={<ItemListContainer />} />
+    <Route path='/categorias' element={""} />
     <Route path='/cart' element={<Cart />} />
     <Route path='/detalle' element={ <ItemDetailContainer />} />
   </Routes>

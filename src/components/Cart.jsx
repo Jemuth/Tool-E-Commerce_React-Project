@@ -4,7 +4,7 @@ const Cart = () => {
   return (
     <>
     <div>
-        Cart
+        <h1>En construcción...</h1>
     </div>
     </>
   );
