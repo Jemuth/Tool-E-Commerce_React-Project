@@ -11,13 +11,12 @@ const Item = ({info}) => {
     return (
         <>
         <Link to={`/detalle/${info.id}`} className="tool">
-            <img src={info.img} alt="" />
+            <img src={info.img} alt="Herramienta" />
             <h3>{info.name}</h3>
             <h4>{info.brand}</h4>
             <p>{info.price}</p>
             <p>Tenemos {info.stock} en stock</p>
         </Link>
-        <ItemCount initial={3} stock={5} onAdd={onAdd}/>
         </>
     );
 }

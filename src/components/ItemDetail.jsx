@@ -19,7 +19,7 @@ export const ItemDetail = ({data}) => {
                     <p>{data.price}</p>
                     <p>{data.description}</p>
                     <p>Tenemos {data.stock} en stock</p>
-                    <ItemCount initial={3} stock={5} onAdd={onAdd}/>
+                    <ItemCount initial={1} stock={data.stock} onAdd={onAdd}/>
                 </div>
             </div>
         </div>
