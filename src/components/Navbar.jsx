@@ -14,7 +14,13 @@ export const Navbar = () => {
                         <NavLink className="nav_link" to='/catalogo'>Catálogo</NavLink>
                     </li>
                     <li>
-                        <NavLink className="nav_link" to='/categorias'>Categorías</NavLink>
+                        <NavLink className="nav_link" to='/categorias/manuales'>Herramientas manuales</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className="nav_link" to='/categorias/electricas'>Herramientas eléctricas</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className="nav_link" to='/categorias/epp'>Equipo de protección personal</NavLink>
                     </li>
                     <li>
                     <NavLink className="nav_link" to='/cart'><CartWidget/></NavLink>

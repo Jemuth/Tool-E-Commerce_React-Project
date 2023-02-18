@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import ItemCount from '../components/ItemCount';
 import ItemList from '../components/ItemList';
+import { useParams } from 'react-router-dom';
 
 const tools = [
     {
@@ -12,7 +12,7 @@ const tools = [
         "description":
           "Taladro Percutor 20V DCD985L2-B2 Dewalt",
         "stock": 10,
-        "category": "Electrica"
+        "category": "electricas"
       },
       {
         "id": 2,
@@ -23,7 +23,7 @@ const tools = [
         "description":
           "Pala punta huevo mango telescopico",
         "stock": 20,
-        "category": "Manual"
+        "category": "manuales"
       },
       {
         "id": 3,
@@ -34,7 +34,7 @@ const tools = [
         "description":
           "Sierra banco 1800W DWE7470 + sierra caladora 500W DW300 Dewalt.",
         "stock": 5,
-        "category": "Electrica"
+        "category": "electricas"
       },
       {
         "id": 4,
@@ -45,7 +45,7 @@ const tools = [
         "description":
           "Mascarilla respirador filtro doble",
         "stock": 40,
-        "category": "EPP"
+        "category": "epp"
       },
       {
         "id": 5,
@@ -56,7 +56,7 @@ const tools = [
         "description":
           "Picota de acero mango fibra de vidrio",
         "stock": 20,
-        "category": "Manual"
+        "category": "manuales"
       },
       {
         "id": 6,
@@ -67,23 +67,29 @@ const tools = [
         "description":
           "Overol Azul Talla M Canvas Redline",
         "stock": 50,
-        "category": "EPP"
+        "category": "epp"
       }
     ];
 
-const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = ({greeting}) => {
     const [data, setData] = useState([]);
+
+    const {categoriaId} = useParams();
 
     useEffect(() => {
         const getData = new Promise(resolve => {
             setTimeout(() => {
                 resolve(tools);
-            },3000);
+            },1000);
         });
-        getData.then(res => setData(res));
+        if (categoriaId) {
+            getData.then(res => setData(res.filter(tools => tools.category === categoriaId)));
+        } else {
+            getData.then(res => setData(res));
+        }
+        
 
-
-    },[])
+    },[categoriaId])
 
     const onAdd = (quantity) => {
         console.log(`Compraste ${quantity} unidades`)
