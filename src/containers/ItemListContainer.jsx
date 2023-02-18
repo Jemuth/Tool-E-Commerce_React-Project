@@ -74,22 +74,22 @@ const tools = [
 export const ItemListContainer = ({greeting}) => {
     const [data, setData] = useState([]);
 
-    const {categoriaId} = useParams();
+    const {categoryId} = useParams();
 
     useEffect(() => {
         const getData = new Promise(resolve => {
             setTimeout(() => {
                 resolve(tools);
-            },1000);
+            },2000);
         });
-        if (categoriaId) {
-            getData.then(res => setData(res.filter(tools => tools.category === categoriaId)));
+        if (categoryId) {
+            getData.then(res => setData(res.filter(tools => tools.category === categoryId)));
         } else {
             getData.then(res => setData(res));
         }
         
 
-    },[categoriaId])
+    },[categoryId])
 
     const onAdd = (quantity) => {
         console.log(`Compraste ${quantity} unidades`)
