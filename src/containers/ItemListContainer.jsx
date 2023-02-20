@@ -77,7 +77,7 @@ const tools = [
       }
     ];
 
-export const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = () => {
     const [data, setData] = useState([]);
 
     const {categoryId} = useParams();
@@ -99,9 +99,6 @@ export const ItemListContainer = ({greeting}) => {
 
     return (
         <>
-        <section>
-            <p>{greeting}</p>
-        </section>
         <ItemList data={data} />
         </>
     );
