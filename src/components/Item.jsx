@@ -1,12 +1,7 @@
 import '../App.css';
 import React from 'react';
-import ItemCount from '../components/ItemCount';
 import { Link } from 'react-router-dom';
 
-const onAdd = (quantity) => {
-    console.log(`Compraste ${quantity} unidades`)
-
-}
 const Item = ({info}) => {
     return (
         <>

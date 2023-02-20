@@ -97,10 +97,6 @@ export const ItemListContainer = ({greeting}) => {
 
     },[categoryId])
 
-    const onAdd = (quantity) => {
-        console.log(`Compraste ${quantity} unidades`)
-
-    }
     return (
         <>
         <section>
