@@ -12,7 +12,7 @@ export const ItemDetail = ({data}) => {
         <>
         <div className="container">
             <div className="detail">
-                <img className="detail_image" src={data.img} alt="" />
+                <img className="detail_image" src={data.img} alt={data.alt} />
                 <div className="content">
                     <h1>{data.name}</h1>
                     <p>{data.brand}</p>

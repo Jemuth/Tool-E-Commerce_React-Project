@@ -6,6 +6,7 @@ const tools = [
     {
         "id": 1,
         "img": "/assets/images/1.jpg",
+        "alt": "Taladro percutor DeWalt",
         "name": "Taladro Percutor",
         "brand": "DeWalt",
         "price": 360000,
@@ -17,6 +18,7 @@ const tools = [
       {
         "id": 2,
         "img": "/assets/images/2.jpg",
+        "alt": "Pala telescopica Stanley ",
         "name": "Pala telescopica",
         "brand": "Stanley",
         "price": 9990,
@@ -28,6 +30,7 @@ const tools = [
       {
         "id": 3,
         "img": "/assets/images/3.jpg",
+        "alt": "Sierra de banco DeWalt",
         "name": "Sierra banco",
         "brand": "DeWalt",
         "price": 409990,
@@ -39,6 +42,7 @@ const tools = [
       {
         "id": 4,
         "img": "/assets/images/4.jpg",
+        "alt": "Mascarilla respirador Karson",
         "name": "Mascarilla respirador",
         "brand": "Karson",
         "price": 26900,
@@ -50,6 +54,7 @@ const tools = [
       {
         "id": 5,
         "img": "/assets/images/5.jpg",
+        "alt": "Picota Redline",
         "name": "Picota",
         "brand": "Redline",
         "price": 28900,
@@ -61,6 +66,7 @@ const tools = [
       {
         "id": 6,
         "img": "/assets/images/6.jpg",
+        "alt": "Overol Redline",
         "name": "Overol",
         "brand": "Redline",
         "price": 52900,
