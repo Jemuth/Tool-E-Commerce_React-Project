@@ -10,6 +10,13 @@
   padding-top: 0;
   text-align: center;
 }
+.container_welcome {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
 .navbar {
   color: black;
   background-color: orange;
@@ -22,10 +29,17 @@ a:visited {
 a:hover {
   color: white;
 }
+.navbar-nav {
+  align-items: center;
+  justify-content: space-between;
+}
 .navbar-nav > li > .dropdown-menu { background-color: orange; }
-.navbar-nav > li{
+.navbar-nav > li {
   padding-left:30px;
   padding-right:30px;
+}
+.cart_link {
+  padding-left: 5rem;
 }
 .card {
   width: 18rem;

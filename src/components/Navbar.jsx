@@ -24,12 +24,9 @@ export const Navbar = () => {
                         <NavLink className="dropdown-item" to='/categorias/epp'>Equipo de protección personal</NavLink>
                     </div>
                     </li>
-                    
-                    <li>
-                    <NavLink className="nav_link" to='/cart'><CartWidget/></NavLink>
-                    </li>
                 </ul>
             </div>
+            <NavLink className="cart_link" to='/cart'><CartWidget/></NavLink>
             </nav>
     );
 }
