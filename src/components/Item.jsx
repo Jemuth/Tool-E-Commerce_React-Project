@@ -5,13 +5,18 @@ import { Link } from 'react-router-dom';
 const Item = ({info}) => {
     return (
         <>
-        <Link to={`/detalle/${info.id}`} className="tool">
-            <img src={info.img} alt={info.alt} />
-            <h3>{info.name}</h3>
-            <h4>{info.brand}</h4>
-            <p>{info.price}</p>
-            <p>Tenemos {info.stock} en stock</p>
-        </Link>
+            <div className="card">
+            <img className="card-img-top" src={info.img} alt={info.alt} />
+            <div className="card-body">
+            <p className="card-title">{info.name}</p>
+            <p className="card-text">{info.brand}</p>
+            <p className="card-text">${info.price}</p>
+            <p className="card-text">Tenemos <span style={{ fontWeight: 'bold' }}>{info.stock}</span> en stock</p>
+            </div>
+            <Link to={`/detalle/${info.id}`}>
+                <button className="card_button">Haz click para ver detalles</button>
+            </Link>
+            </div>
         </>
     );
 }

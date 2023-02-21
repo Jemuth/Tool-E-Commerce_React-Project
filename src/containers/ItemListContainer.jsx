@@ -99,7 +99,9 @@ export const ItemListContainer = () => {
 
     return (
         <>
+        <div className="item_list">
         <ItemList data={data} />
+        </div>
         </>
     );
 }

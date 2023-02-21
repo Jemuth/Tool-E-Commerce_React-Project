@@ -10,10 +10,10 @@ const onAdd = (quantity) => {
 export const ItemDetail = ({data}) => {
     return (
         <>
-        <div className="container">
-            <div className="detail">
-                <img className="detail_image" src={data.img} alt={data.alt} />
-                <div className="content">
+        <div>
+            <div>
+                <img src={data.img} alt={data.alt} />
+                <div>
                     <h1>{data.name}</h1>
                     <p>{data.brand}</p>
                     <p>{data.price}</p>
