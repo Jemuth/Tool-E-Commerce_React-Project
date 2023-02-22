@@ -4,7 +4,7 @@ const Welcome = () => {
   return (
     <>
     <div className= "container_welcome">
-        <img src="./assets/images/welcome.jpg" alt="Bienvenidos a P-Tools" />
+    <img src="./assets/images/welcome.jpg" alt="Bienvenidos a P-Tools" />
     </div>
     </>
   );

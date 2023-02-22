@@ -27,6 +27,13 @@ html, body, #app, #app>div {
   display: flex;
   justify-content: space-evenly;
 }
+#navtext {
+  font-weight: bold !important;
+}
+.navbar-brand {
+  margin-left: 8rem;
+  margin-right: 10rem !important;
+}
 a:visited {
   color: black;
 }
@@ -35,15 +42,40 @@ a:hover {
 }
 .navbar-nav {
   align-items: center;
-  justify-content: space-between;
 }
-.navbar-nav > li > .dropdown-menu { background-color: orange; }
+#navtext {
+  font-size: x-large;
+  color: black;
+}
+#navtext:hover {
+  color: #f94724;
+}
+.navbar-nav > li > .dropdown-menu { background-color: #ff7919; font-weight: bold; font-size: large; }
+
+.dropdown a:hover {
+  color: #f94724;
+}
+.navbar-nav > li > .dropdown-menu a:visited {     background-color: #f94724; color: black;  }
+
 .navbar-nav > li {
   padding-left:30px;
   padding-right:30px;
 }
+.navbar .navbar-nav .nav-link {
+  font-weight: bold;
+  font-size: x-large;
+}
 .cart_link {
-  padding-left: 5rem;
+  margin-left: 20rem;
+}
+.cart_container i {
+  font-size: 3.1rem;
+  padding-bottom: 3rem;
+}
+.cart_container p {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 .card {
   width: 18rem;
@@ -96,7 +128,7 @@ a:hover {
   padding-left: 25rem;
   padding-right: 25rem;
   grid-gap: 50px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: .1rem;
   background-color: black;
   justify-items: center;

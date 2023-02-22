@@ -2,9 +2,9 @@ import React from 'react';
 
 const CartWidget = () => {
   return (
-    <div>
+    <div className="cart_container">
         <i className="bi bi-cart2"></i>
-        <span>4</span>
+        <p><span style={{ fontWeight: 'bold' }}>4</span></p>
     </div>
   );
 }
