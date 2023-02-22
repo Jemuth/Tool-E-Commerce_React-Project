@@ -34,12 +34,6 @@ html, body, #app, #app>div {
   margin-left: 8rem;
   margin-right: 10rem !important;
 }
-a:visited {
-  color: black;
-}
-a:hover {
-  color: white;
-}
 .navbar-nav {
   align-items: center;
 }
@@ -67,6 +61,12 @@ a:hover {
 }
 .cart_link {
   margin-left: 20rem;
+}
+.cart_link:visited {
+  color: black;
+}
+.cart_link:hover {
+  color: #f93224 !important;
 }
 .cart_container i {
   font-size: 3.1rem;
