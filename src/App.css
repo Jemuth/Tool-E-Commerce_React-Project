@@ -63,7 +63,7 @@ html, body, #app, #app>div {
   margin-left: 20rem;
 }
 .cart_link:visited {
-  color: black;
+  color: black !important;
 }
 .cart_link:hover {
   color: #f93224 !important;
