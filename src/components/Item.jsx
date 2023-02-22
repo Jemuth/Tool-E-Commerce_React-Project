@@ -10,7 +10,7 @@ const Item = ({info}) => {
             <div className="card-body">
             <p className="card-title">{info.name}</p>
             <p className="card-text">{info.brand}</p>
-            <p className="card-text">${info.price}</p>
+            <h3 className="card-text">${info.price}</h3>
             <p className="card-text">Tenemos <span style={{ fontWeight: 'bold' }}>{info.stock}</span> en stock</p>
             </div>
             <Link to={`/detalle/${info.id}`}>
