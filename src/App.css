@@ -2,6 +2,10 @@ html, body, #app, #app>div {
   height: 100%;
 }
 
+:root {
+  --gradient: linear-gradient(to left top, orange 10%, #FF512F 90%) !important;
+}
+
 #root {
   width: 100%;
   height: 100%;
@@ -19,7 +23,7 @@ html, body, #app, #app>div {
 }
 .navbar {
   color: black;
-  background-color: orange;
+  background: linear-gradient(to right,  orange 10%, #FF512F 90%);
   display: flex;
   justify-content: space-evenly;
 }
@@ -43,22 +47,50 @@ a:hover {
 }
 .card {
   width: 18rem;
-  height: 5rem;
-  padding: 2rem;
+  height: 100% !important;
+  padding: 1rem;
+  background: #222;
+  border: 2px solid orange !important;
+  color: black;
 }
 .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 1rem;
   height: auto;
+  width: 100% !important;
+  padding-bottom: .1rem !important;
+  padding-top: .1rem !important;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: var(--gradient) !important;
 }
 .card-title {
   font-weight: bold;
 }
 .card_button {
-  background-color: orange;
+  color: white;
+  border: 5px solid;
+  border-image-slice: 1;
+  font-weight: bold;
+  background: var(--gradient) !important;
+  border-image-source:  var(--gradient) !important; 
+  text-decoration: none;
+  transition: all .4s ease;
+}
+
+.btn:hover, .btn:focus {
+  background: var(--gradient) !important;
+  -webkit-text-fill-color: black !important;
+  border: .1px solid none !important; 
+  box-shadow: black 1px 0 10px;
 }
 
 .item_list {
   display: grid;
   height: auto;
+  width: auto;
   padding-top: 5rem;
   padding-bottom: 3rem;
   padding-left: 25rem;
@@ -114,3 +146,6 @@ a:hover {
   justify-content: center;
   gap: 1rem;
 }
+
+
+
