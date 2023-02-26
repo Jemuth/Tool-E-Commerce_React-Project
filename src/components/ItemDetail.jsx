@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../App.css';
 import ItemCount from '../components/ItemCount';
+import { useCartContext } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
-const onAdd = (quantity) => {
-    console.log(`Compraste ${quantity} unidades`)
+export const ItemDetail = ({ data }) => {
+    const [goToCart, setGoToCart] = useState(false);
+    const {addProduct} = useCartContext();
 
+    const onAdd = (quantity) => {
+    setGoToCart(true);
+    addProduct(data, quantity);
 }
-
-export const ItemDetail = ({data}) => {
     return (
         <>
             <div className="item_detail">
@@ -22,7 +26,11 @@ export const ItemDetail = ({data}) => {
                 <h2 className="card-text"><span style={{ fontWeight: 'bold' }}>{data.description}</span></h2>
                 <p className="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non elit a orci dapibus lobortis. Nulla imperdiet, turpis in tempus luctus, ante dolor pulvinar ipsum, et euismod dolor sapien et lacus. Nunc quis efficitur massa. Donec volutpat neque et leo aliquam, at aliquam arcu mattis. Phasellus ut mi risus. Phasellus convallis volutpat orci, sit amet posuere elit cursus vitae. Proin lacinia lacus mauris, eget egestas arcu varius non. Maecenas malesuada aliquet mattis. Aliquam non turpis blandit, lobortis nisl ut, luctus metus. Proin cursus dui eget hendrerit bibendum.
                 In id rhoncus ex. Pellentesque blandit sed est nec convallis. Etiam ut magna ac nisl egestas congue.</p>
-                <ItemCount initial={1} stock={data.stock} onAdd={onAdd}/>
+                {
+                    goToCart 
+                        ? <Link to='/cart'><button>Terminar compra</button></Link>
+                        : <ItemCount initial={1} stock={data.stock} onAdd={onAdd}/>
+                }
                 </div>
             </div>
         </>
