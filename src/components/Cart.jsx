@@ -13,14 +13,14 @@ const Cart = () => {
     );
   }
   return (
-    <>
+    <div className="cart">
     {
       cart.map(product => <ItemCart key={product.id} product={product} />)
     }
     <p>
       Total: ${totalPrice()}
     </p>
-    </>
+    </div>
   );
 }
 

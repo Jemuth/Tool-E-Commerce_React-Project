@@ -179,6 +179,11 @@ html, body, #app, #app>div {
   justify-content: center;
   gap: 1rem;
 }
+.cart {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
 .itemCart {
   display: flex;
   border-bottom: 1px solid gray;
