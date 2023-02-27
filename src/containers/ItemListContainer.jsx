@@ -97,6 +97,23 @@ export const ItemListContainer = () => {
 
     },[categoryId])
 
+    const {brandId} = useParams();
+
+    useEffect(() => {
+        const getData = new Promise(resolve => {
+            setTimeout(() => {
+                resolve(tools);
+            },2000);
+        });
+        if (brandId) {
+            getData.then(res => setData(res.filter(tools => tools.brand === brandId)));
+        } else {
+            getData.then(res => setData(res));
+        }
+        
+
+    },[brandId])
+
     return (
         <>
         <div className="item_list">

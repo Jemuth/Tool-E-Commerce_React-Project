@@ -15,11 +15,62 @@ html, body, #app, #app>div {
   background-color: #F0EEED;
 }
 .container_welcome {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5rem;
+  width: auto;
+  height: auto;
   background-color: #F0EEED;
+}
+.container_welcome > .container {
+  display: flex;
+  flex-direction: column;
+}
+.container_welcome > img {
+  width: 100%;
+  border-radius: .5rem;
+  box-shadow: 2px 2px 2px .1px grey;
+}
+.container_welcome > .container > p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  font-size: 2.9rem;
+  font-weight: bold;
+}
+.container_welcome > .container {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  border-radius: .5rem;
+  height: 25.4rem;
+  margin: 2rem;
+}
+.container_welcome > .container > .welcometext {
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+.container_welcome > .container > .welcomelink {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10rem;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+.container_welcome > .container > .welcomelink > a:hover {
+  text-decoration: none;
+  color: black !important;
+}
+.container_welcome > .container > .welcomelink > a:visited {
+  text-decoration: none;
+  color: black !important;
+}
+#welcometext {
+  font-size: 1.5rem;
+  font-weight: bold !important;
 }
 .navbar {
   color: black;
@@ -27,11 +78,14 @@ html, body, #app, #app>div {
   display: flex;
   justify-content: space-evenly;
 }
+.navbar-logo {
+  width: 20rem;
+}
 #navtext {
   font-weight: bold !important;
 }
 .navbar-brand {
-  margin-left: 8rem;
+  margin-left: 5rem;
   margin-right: 10rem !important;
 }
 .navbar-nav {
@@ -42,14 +96,18 @@ html, body, #app, #app>div {
   color: black;
 }
 #navtext:hover {
-  color: #f94724;
+  color: #F0EEED;
 }
 .navbar-nav > li > .dropdown-menu { background-color: #ff7919; font-weight: bold; font-size: large; }
 
 .dropdown a:hover {
-  color: #f94724;
+  color: #F0EEED;
 }
-.navbar-nav > li > .dropdown-menu a:visited {     background-color: #f94724; color: black;  }
+.dropdown-menu > .dropdown-item {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+.navbar-nav > li > .dropdown-menu a:visited {     background-color: #F0EEED; color: black;  }
 
 .navbar-nav > li {
   padding-left:30px;
@@ -66,23 +124,23 @@ html, body, #app, #app>div {
   color: black !important;
 }
 .cart_link:hover {
-  color: #f93224 !important;
+  color: #F0EEED !important;
 }
 .cart_container i {
   font-size: 3.1rem;
   padding-bottom: 3rem;
 }
 .cart_container p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
 }
 .card {
+  font-family: 'Montserrat', sans-serif;
   width: 18rem;
   height: 100% !important;
   padding: 1rem;
   background: #222;
-  
   color: black;
   box-shadow: 2px 2px 2px .1px grey;
 }
@@ -97,29 +155,23 @@ html, body, #app, #app>div {
   padding-top: .1rem !important;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  background: var(--gradient) !important;
+  
 }
 .card-title {
   font-weight: bold;
 }
 .card_button {
-  color: white;
+  color: black !important;
   border: 5px solid;
-  border-image-slice: 1;
-  font-weight: bold;
-  background: var(--gradient) !important;
-  border-image-source:  var(--gradient) !important; 
+  background: var(--gradient);
   text-decoration: none;
-  transition: all .4s ease;
-}
-
-.btn:hover, .btn:focus {
-  background: var(--gradient) !important;
-  -webkit-text-fill-color: black !important;
   border: .1px solid none !important; 
-  box-shadow: black 1px 0 10px;
+  box-shadow: black 1px 0 1px;
 }
-
+.card_button:hover {
+  background: #F0EEED !important;
+  color: black !important;
+}
 .item_list {
   display: grid;
   height: auto;
