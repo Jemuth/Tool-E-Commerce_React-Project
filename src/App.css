@@ -135,6 +135,10 @@ html, body, #app, #app>div {
   display: flex;
   flex-direction: column;
 }
+.cart_container i:visited {
+  color: black !important;
+}
+
 .card {
   font-family: 'Montserrat', sans-serif;
   width: 18rem;
