@@ -24,7 +24,7 @@ export const ItemCount = ({initial, stock, onAdd}) => {
             <button className="count_buttons card_button btn mr-2" disabled={count >= stock} onClick={increase}>+</button>
             </div>
             <div>
-                <button className="count_buttons card_button btn mr-2" disabled= {stock <= 0} onClick={() => onAdd(count)}><span style={{ fontWeight: 'bold' }}>Agregar al carro <i class="bi bi-cart2"></i></span></button>
+                <button className="count_buttons card_button btn mr-2" disabled= {stock <= 0} onClick={() => onAdd(count)}><span style={{ fontWeight: 'bold' }}>Agregar al carro <i className="bi bi-cart2"></i></span></button>
             </div>
         </div>
     );

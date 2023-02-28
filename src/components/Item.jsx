@@ -19,7 +19,7 @@ const Item = ({info}) => {
                                 </div>
                                 <div className='container'>
                                     <Link to={`/detalle/${info.id}`}>
-                                        <button className="card_button btn mr-2"><span style={{ fontWeight: 'bold' }}>Ver detalles <i class="bi bi-eye-fill"></i></span></button>
+                                        <button className="card_button btn mr-2"><span style={{ fontWeight: 'bold' }}>Ver detalles <i className="bi bi-eye-fill"></i></span></button>
                                     </Link>
                                 </div>
                         </div>

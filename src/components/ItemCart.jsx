@@ -7,15 +7,15 @@ const { removeProduct } = useCartContext();
 
   return (
     <div className='itemCart'>
-        <img src={product.img} alt={product.description} />
+        <img src={product.img} alt={product.name} />
         <div>
-            <p>Titulo: {product.name}</p>
+            <p>{product.description}</p>
             <p>Cantidad: {product.quantity}</p>
-            <p>Precio por unidad: {product.price}</p>
-            <p>Subtotal: ${product.quantity * product.price} </p>
-            <button onClick={() => removeProduct(product.id)}>Eliminar</button>
+            <p>Precio por unidad: ${product.price}</p>
+            <p><span style={{ fontWeight: 'bold' }}>Subtotal: ${product.quantity * product.price}</span></p>
+            <button className='card_button btn mr-2' onClick={() => removeProduct(product.id)}>Eliminar</button>
         </div>
-    </div>
+      </div>
   )
 }
 
