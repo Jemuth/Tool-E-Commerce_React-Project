@@ -11,7 +11,7 @@ const tools = [
         "brand": "DeWalt",
         "price": 360000,
         "description":
-          "Taladro Percutor 20V DCD985L2-B2 Dewalt",
+          "Taladro percutor 20V DCD985L2-B2",
         "stock": 10,
         "category": "electricas"
       },
@@ -35,7 +35,7 @@ const tools = [
         "brand": "DeWalt",
         "price": 409990,
         "description":
-          "Sierra banco 1800W DWE7470 + sierra caladora 500W DW300 Dewalt.",
+          "Sierra banco 1800W DWE7470 + sierra caladora 500W DW300",
         "stock": 5,
         "category": "electricas"
       },
@@ -71,9 +71,45 @@ const tools = [
         "brand": "Redline",
         "price": 52900,
         "description":
-          "Overol Azul Talla M Canvas Redline",
+          "Overol azul talla M Canvas",
         "stock": 50,
         "category": "epp"
+      },
+      {
+        "id": 7,
+        "img": "/assets/images/7.jpg",
+        "alt": "Casco arnés Karson",
+        "name": "Casco arnés",
+        "brand": "Karson",
+        "price": 3990,
+        "description":
+          "Casco arnés tela 6 puntas V11245",
+        "stock": 40,
+        "category": "epp"
+      },
+      {
+        "id": 8,
+        "img": "/assets/images/8.jpg",
+        "alt": "Llave inglesa Stanley",
+        "name": "Llave inglesa",
+        "brand": "Stanley",
+        "price": 17500,
+        "description":
+          "LLave inglesa ajustable",
+        "stock": 70,
+        "category": "manuales"
+      },
+      {
+        "id": 9,
+        "img": "/assets/images/9.jpg",
+        "alt": "Sierra circular DeWalt",
+        "name": "Sierra circular",
+        "brand": "DeWalt",
+        "price": 178900,
+        "description":
+          "Sierra circular eléctrica inalámbrica DCS571B 115mm negro/amarillo",
+        "stock": 20,
+        "category": "electricas"
       }
     ];
 

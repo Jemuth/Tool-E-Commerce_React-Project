@@ -118,7 +118,7 @@ html, body, #app, #app>div {
   font-size: x-large;
 }
 .cart_link {
-  margin-left: 20rem;
+  margin-left: 10rem;
 }
 .cart_link:visited {
   color: black !important;
@@ -191,37 +191,56 @@ html, body, #app, #app>div {
   justify-items: center;
 }
 .item_detail {
-  display: grid;
+  display: flex;
+  flex-direction: row;
   height: auto;
   padding-top: 5rem;
   padding-bottom: 3rem;
-  padding-left: 7rem;
-  padding-right: 7rem;
-  grid-gap: 2rem;
-  grid-template-columns: 1fr 1fr;
+  padding-left: 12rem;
+  padding-right: 12rem;
   background-color: #F0EEED;
-  justify-items: center;
-}
-.item_detail > .card {
   align-items: center;
-  width: auto;
-  height: auto;
+  justify-content: center;
 }
-.item_detail > .card > .card-img-top {
-  width: 80%;
-  height: 80%;
+.detail_image_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: auto;
+}
+.detail_image {
+  width: 25rem !important;
+  height: 25rem !important;
+}
+.review_text_container {
+  font-family: 'Montserrat', sans-serif;
+  border-radius: .3rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
 }
 .review_container {
   border-radius: .3rem;
-  width: auto;
+  width: 70%;
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding: 4rem;
-  background-color: orange;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  margin-left: 0;
+  padding:0 ;
+  background-color: white;
+  box-shadow: 2px 2px 2px .1px grey;
 }
 .lorem {
   text-align: justify;
+  font-size: small;
 }
 .item_count {
   display: flex;
