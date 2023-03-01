@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
     return (
-            <nav className="navbar px-3 navbar-expand-lg">
+            <nav className="navbar px-3 navbar-expand-lg fixed-top">
             <NavLink className="navbar-brand" to='/'><img className="navbar-logo" src="/assets/images/brandlogo.png" alt="Logo Ptools" /></NavLink>
             <div className="navbar_links" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import ItemList from '../components/ItemList';
 import { useParams } from 'react-router-dom';
 import Loading from '../components/Loading';
+import BrandPanel from '../components/BrandPanel';
 
 const tools = [
     {
@@ -156,8 +157,13 @@ export const ItemListContainer = () => {
     }
     return (
         <>
-        <div className="item_list">
+        <div className='itemlist_container'>
+        <div className='sidebar'>
+        <BrandPanel/>
+        </div>
+        <div className="item_list overflow-auto">
         <ItemList data={data} />
+        </div>
         </div>
         </>
     );

@@ -13,7 +13,8 @@ export const ItemDetail = ({ data }) => {
     addProduct(data, quantity);
 }
     return (
-        <>
+        <>  
+            <p className='detailtext'>Detalle de producto</p>
             <div className="item_detail">
                 <div className='review_container'>
                 <div className="detail_image_container">
