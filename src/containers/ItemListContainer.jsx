@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ItemList from '../components/ItemList';
 import { useParams } from 'react-router-dom';
+import Loading from '../components/Loading';
 
 const tools = [
     {
@@ -114,14 +115,15 @@ const tools = [
     ];
 
 export const ItemListContainer = () => {
+    const [loading, setLoading] = useState(true);
     const [data, setData] = useState([]);
-
     const {categoryId} = useParams();
 
     useEffect(() => {
         const getData = new Promise(resolve => {
             setTimeout(() => {
                 resolve(tools);
+                setLoading(false);
             },2000);
         });
         if (categoryId) {
@@ -149,7 +151,9 @@ export const ItemListContainer = () => {
         
 
     },[brandId])
-
+    if (loading) {
+      return <Loading/>;
+    }
     return (
         <>
         <div className="item_list">

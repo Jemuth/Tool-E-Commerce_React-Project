@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import ItemDetail from '../components/ItemDetail';
 import { useParams } from 'react-router-dom';
+import Loading from '../components/Loading';
 
 const tools = [
     {
@@ -115,6 +116,7 @@ const tools = [
 
 
 export const ItemDetailContainer = () => {
+    const [loading, setLoading] = useState(true);
     const [data, setData] = useState({});
     const { detailId } = useParams();
 
@@ -122,11 +124,15 @@ export const ItemDetailContainer = () => {
         const getData = new Promise(resolve => {
             setTimeout(() => {
                 resolve(tools);
+                setLoading(false);
             }, 2000);
         });
 
         getData.then(res => setData(res.find(tools => tools.id === parseInt(detailId))));
     },[])
+    if (loading) {
+      return <Loading/>;
+    }
     return (
         <ItemDetail data={data}/>
     );

@@ -294,5 +294,14 @@ html, body, #app, #app>div {
 .bi-emoji-frown {
   font-size: 8rem;
 }
-
+.loadercontainer{
+  margin: 5rem;
+  padding: 5rem;
+}
+.loadertext{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: xx-large;
+  padding-bottom: 2rem
+}
 
