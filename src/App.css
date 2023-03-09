@@ -351,6 +351,10 @@ html, body, #app, #app>div {
 .checkoutForm >h3 {
   text-decoration: underline;
 }
+.checkoutForm >p {
+  text-decoration: none;
+  font-size: larger;
+}
 .inputForm {
   display: flex;
   flex-direction: row;
