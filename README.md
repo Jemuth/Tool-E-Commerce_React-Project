@@ -17,11 +17,12 @@ categorías(ej:eléctricas, manuales, equipo de seguridad,etc) acorde a las exig
 
 *Para ejecutar el proyecto*
 
-npm run dev
+    npm run dev
 
 *Librerías utilizadas*
-    1. Vite
-    2. React Router Dom
-    3. Bootstrap
-    4. SweetAlert2
-    5. Firebase/Firestore
+
+* Vite
+* React Router Dom
+* Bootstrap
+* SweetAlert2
+* Firebase/Firestore
