@@ -363,6 +363,11 @@ html, body, #app, #app>div {
   gap: 2rem;
   width: auto;
 }
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
 .emptyCart{
   display: flex;
   flex-direction: column;
