@@ -1,5 +1,5 @@
 import React from 'react';
-import {useRef, useEffect, useState} from 'react';
+import {useState} from 'react';
 import { useCartContext } from '../context/CartContext';
 import ItemCart from './ItemCart';
 import { NavLink } from 'react-router-dom';
@@ -46,7 +46,6 @@ const Cart = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, 'orders');
     addDoc(ordersCollection, order)
-    .then(({ id }) => console.log(id))
     Swal.fire({
       title: 'Tu orden ha sido ingresada',
       text: 'Recibirás en tu correo una copia de la orden de compra',
