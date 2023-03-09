@@ -7,13 +7,13 @@ categorías(ej:eléctricas, manuales, equipo de seguridad,etc) acorde a las exig
 
 *Workflow general del proyecto*:
 
-1- Instalación y creación de proyecto React con integración a GitHub
-2- Creación de navegación y componentes esenciales(Navbar, CartWidget, etc)
-3- Mock de productos y sus respectivos detalles para visualizacion en sus respectivos contenedores(ItemListContainer, ItemDetailContainer) y componentes(ItemCount, Item, etc)
-4- Aplicación de routing por medio de react-router-dom
-5- Instauración de visualización de carro de compras aplicando CartContext
-6- Integración con Firebase/Firestore
-7- Aplicación de css y otros componentes y navegación personalizada
+* Instalación y creación de proyecto React con integración a GitHub
+* Creación de navegación y componentes esenciales(Navbar, CartWidget, etc)
+* Mock de productos y sus respectivos detalles para visualizacion en sus respectivos contenedores(ItemListContainer, ItemDetailContainer) y componentes(ItemCount, Item, etc)
+* Aplicación de routing por medio de react-router-dom
+* Instauración de visualización de carro de compras aplicando CartContext
+* Integración con Firebase/Firestore
+* Aplicación de css y otros componentes y navegación personalizada
 
 *Usabilidad*
 
