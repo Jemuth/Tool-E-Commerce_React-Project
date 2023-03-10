@@ -12,11 +12,11 @@ const Cart = () => {
   
   const { cart, totalPrice } = useCartContext();
 
-  const [nombre, setNombre] = useState('Ingrese nombre');
-  const [apellido, setApellido] = useState('Ingrese apellido');
-  const [fono, setFono] = useState('Ingrese teléfono');
-  const [correo, setCorreo] = useState('Ingrese correo');
-  const [validarCorreo, setValidarCorreo] = useState('Ingrese nuevamente correo')
+  const [nombre, setNombre] = useState('');
+  const [apellido, setApellido] = useState('');
+  const [fono, setFono] = useState('');
+  const [correo, setCorreo] = useState('');
+  const [validarCorreo, setValidarCorreo] = useState('')
 
 
 
@@ -106,7 +106,7 @@ const Cart = () => {
             <input align="left" id="adress" type="text" onChange={validarCorreoHandleChange} defaultValue={validarCorreo}/>
           </div>
         </form>
-      <button disabled={correo != validarCorreo} onClick={handleClick} className= "card_button btn mr-2"><span style={{ fontWeight: 'bold'}}>Enviar orden de compra</span></button>
+      <button disabled={correo != validarCorreo || nombre == '' || apellido == '' || fono == '' || correo == '' || validarCorreo == ''} onClick={handleClick} className= "card_button btn mr-2"><span style={{ fontWeight: 'bold'}}>Enviar orden de compra</span></button>
       <Link to='/catalogo'><button className="card_button btn mr-2"><span style={{ fontWeight: 'bold' }}>Seguir comprando <i className="bi bi-currency-dollar"></i></span></button></Link>
     </div>
   </div>
