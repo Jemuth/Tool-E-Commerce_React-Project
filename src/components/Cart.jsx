@@ -12,30 +12,36 @@ const Cart = () => {
   
   const { cart, totalPrice } = useCartContext();
 
-  const [nombre, setNombre] = useState('');
-  const [email, setEmail] = useState('');
-  const [fono, setFono] = useState('');
-  const [direccion, setDireccion] = useState('');
+  const [nombre, setNombre] = useState('Ingrese nombre');
+  const [apellido, setApellido] = useState('Ingrese apellido');
+  const [fono, setFono] = useState('Ingrese teléfono');
+  const [correo, setCorreo] = useState('Ingrese correo');
+  const [validarCorreo, setValidarCorreo] = useState('Ingrese nuevamente correo')
+
+
 
   const nombreHandleChange = event => {
     setNombre(event.target.value);
   };
-  const emailHandleChange = event => {
-    setEmail(event.target.value);
+  const apellidoHandleChange = event => {
+    setApellido(event.target.value);
   };
   const fonoHandleChange = event => {
     setFono(event.target.value);
   };
-  const direccionHandleChange = event => {
-    setDireccion(event.target.value);
+  const correoHandleChange = event => {
+    setCorreo(event.target.value);
   };
- 
+  const validarCorreoHandleChange = event => {
+    setValidarCorreo(event.target.value);
+  };
+
   const order = {
     buyer: {
       name: nombre,
-      email: email,
+      surname: apellido,
       phone: fono,
-      adress: direccion
+      email: correo
     },
     items: cart.map(product => ({ id: product.id, name: product.name, price: product.price, quantity: product.quantity })),
     total: totalPrice(),
@@ -54,8 +60,7 @@ const Cart = () => {
       imageHeight: 300,
       imageAlt: 'Trabajadores',
       confirmButtonColor: '#ff7919',
-    })
-  }
+    })}
 
 
   if (cart.length === 0) {
@@ -85,19 +90,23 @@ const Cart = () => {
             <input align="left" id="name" type="text" onChange={nombreHandleChange} defaultValue={nombre}/>
           </div>
           <div className="inputForm">
-            <label align="right" htmlFor="email">Correo</label>
-            <input align="left" id="email" type="text" onChange={emailHandleChange} defaultValue={email}/>
+            <label align="right" htmlFor="email">Apellido</label>
+            <input align="left" id="email" type="text" onChange={apellidoHandleChange} defaultValue={apellido}/>
           </div>
           <div className="inputForm">
             <label align="right" htmlFor="phone">Teléfono</label>
             <input align="left" id="phone" type="phone" onChange={fonoHandleChange} defaultValue={fono}/>
           </div>
           <div className="inputForm">
-            <label align="right" htmlFor="adress">Dirección</label>
-            <input align="left" id="adress" type="text" onChange={direccionHandleChange} defaultValue={direccion}/>
+            <label align="right" htmlFor="adress">Correo</label>
+            <input align="left" id="adress" type="text" onChange={correoHandleChange} defaultValue={correo}/>
+          </div>
+          <div className="inputForm">
+            <label align="right" htmlFor="adress">Verifique correo</label>
+            <input align="left" id="adress" type="text" onChange={validarCorreoHandleChange} defaultValue={validarCorreo}/>
           </div>
         </form>
-      <button onClick={handleClick} className= "card_button btn mr-2"><span style={{ fontWeight: 'bold'}}>Enviar orden de compra</span></button>
+      <button disabled={correo != validarCorreo} onClick={handleClick} className= "card_button btn mr-2"><span style={{ fontWeight: 'bold'}}>Enviar orden de compra</span></button>
       <Link to='/catalogo'><button className="card_button btn mr-2"><span style={{ fontWeight: 'bold' }}>Seguir comprando <i className="bi bi-currency-dollar"></i></span></button></Link>
     </div>
   </div>
