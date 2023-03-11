@@ -33,6 +33,6 @@ categorías(ej:eléctricas, manuales, equipo de seguridad,etc) acorde a las exig
 
 * Vite
 * React Router Dom
-* Bootstrap
-* SweetAlert2
+* Bootstrap(Estilo general del sitio)
+* SweetAlert2(Display de alerta para orden de compra)
 * Firebase/Firestore
