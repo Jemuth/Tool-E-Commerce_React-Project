@@ -35,6 +35,7 @@ const Cart = () => {
   const validarCorreoHandleChange = event => {
     setValidarCorreo(event.target.value);
   };
+  
 
   const order = {
     buyer: {
@@ -45,6 +46,7 @@ const Cart = () => {
     },
     items: cart.map(product => ({ id: product.id, name: product.name, price: product.price, quantity: product.quantity })),
     total: totalPrice(),
+    date : new Date(),
   }
 
   
@@ -52,15 +54,17 @@ const Cart = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, 'orders');
     addDoc(ordersCollection, order)
+    .then(({id}) => 
     Swal.fire({
       title: 'Tu orden ha sido ingresada',
-      text: 'Recibirás en tu correo una copia de la orden de compra',
+      text: 'Tu código de orden es : \n' + (id) + 
+      '. Recibirás una copia de la orden en tu correo' ,
       imageUrl: 'https://raw.githubusercontent.com/Jemuth/PreEntregaI-JuanJana/main/public/assets/images/alert.jpg',
       imageWidth: 400,
       imageHeight: 300,
       imageAlt: 'Trabajadores',
       confirmButtonColor: '#ff7919',
-    })}
+    }))}
 
 
   if (cart.length === 0) {
