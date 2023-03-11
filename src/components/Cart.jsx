@@ -58,7 +58,7 @@ const Cart = () => {
     Swal.fire({
       title: 'Tu orden ha sido ingresada',
       text: 'Tu código de orden es : \n' + (id) + 
-      '. Recibirás una copia de la orden en tu correo' ,
+      '. Recibirás una copia de la orden en tu correo.' ,
       imageUrl: 'https://raw.githubusercontent.com/Jemuth/PreEntregaI-JuanJana/main/public/assets/images/alert.jpg',
       imageWidth: 400,
       imageHeight: 300,
