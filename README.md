@@ -1,35 +1,33 @@
-# E-commerce: Venta de herramientas
+# Tool E-commerce: React project
 
-**Proyecto React para Coderhouse**
+*Concept*: To generate an e-commerce site related to the sale of tools and work accessories, with their respective categories (e.g.: electrical, manual, safety equipment, etc.).
+categories (e.g.: electrical, manual, safety equipment, etc).
 
-*Premisa*: Generar un ecommerce relacionado a la venta de herramientas y accesorios relacionados, con sus respectivas
-categorías(ej:eléctricas, manuales, equipo de seguridad,etc) acorde a las exigencias del curso React de Coderhouse.
+*General project workflow:*
 
-*Workflow general del proyecto*:
+* Installation and creation of React project with GitHub integration.
+* Creation of navigation and essential components (Navbar, CartWidget, etc).
+* Mock products and their respective details for display in their respective containers (ItemListContainer, ItemDetailContainer) and components (ItemCount, Item, etc).
+* Implementation of routing through react-router-dom
+* Implementation of shopping cart visualization by applying CartContext
+* Integration with Firebase/Firestore
+* Application of css and other components and custom navigation
 
-* Instalación y creación de proyecto React con integración a GitHub
-* Creación de navegación y componentes esenciales(Navbar, CartWidget, etc)
-* Mock de productos y sus respectivos detalles para visualizacion en sus respectivos contenedores(ItemListContainer, ItemDetailContainer) y componentes(ItemCount, Item, etc)
-* Aplicación de routing por medio de react-router-dom
-* Instauración de visualización de carro de compras aplicando CartContext
-* Integración con Firebase/Firestore
-* Aplicación de css y otros componentes y navegación personalizada
+*Usability*
 
-*Usabilidad*
-
-1. *Navegación* : El catálogo despliega todos los productos disponibles, los cuales pueden filtrarse al hacer click en los links correspondientes a cada categoría. También se incorpora filtrado por marca, accesible tanto por la barra de navegacion como el sidebar.
+1. *Navigation* : The catalog displays all available products, which can be filtered by clicking on the links corresponding to each category. It also incorporates filtering by brand, accessible from both the navigation bar and the sidebar.
 
 ![](https://github.com/Jemuth/PreEntregaI-JuanJana/blob/main/public/ToolAppTest1.gif)
 
-2. *Detalles y orden de compra* : Cada producto del catálogo puede verse a detalle, con sus especificaciones, precio y stock. El producto puede agregarse al carro, lo cual se refleja en el componente CartWidget de la barra de navegacion. Al ver el carro, se vera un detalle de los productos y la posibilidad de hacer una orden de compra por medio de un formulario, el cual al ser enviado generará un nuevo documento en la correspondiente colección de Firebase.
+2. *Details and purchase order* : Each product in the catalog can be viewed in detail, with its specifications, price and stock. The product can be added to the cart, which is reflected in the CartWidget component of the navigation bar. When viewing the cart, you will see a detail of the products and the possibility to make a purchase order through a form, which when submitted will generate a new document in the corresponding Firebase collection.
 
 ![](https://github.com/Jemuth/PreEntregaI-JuanJana/blob/main/public/ToolAppTest2.gif)
 
-*Para ejecutar el proyecto*
+*To run project*
 
     npm run dev
 
-*Librerías utilizadas*
+*Libraries*
 
 * Vite
 * React Router Dom
