@@ -31,6 +31,6 @@ categories (e.g.: electrical, manual, safety equipment, etc).
 
 * Vite
 * React Router Dom
-* Bootstrap(Estilo general del sitio)
-* SweetAlert2(Display de alerta para orden de compra)
+* Bootstrap
+* SweetAlert2
 * Firebase/Firestore
